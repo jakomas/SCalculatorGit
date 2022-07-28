@@ -4,8 +4,8 @@ import jkms.jakomas.Main.LexemeTypes;
 
 //Лексема это - базовая абстрактная единица значения в user_input
 class Lexeme {
-    LexemeTypes lexemeTypes;
-    String value;
+    private final LexemeTypes lexemeTypes;
+    private final String value;
 
     //конструктор, если value не одиночный символ
     Lexeme(LexemeTypes lexemeTypes, String value) {
@@ -25,4 +25,7 @@ class Lexeme {
                 ", value='" + value + '\'' +
                 '}';
     }
+
+    public LexemeTypes getType() { return lexemeTypes; }
+    public String getValue() { return value; }
 }
