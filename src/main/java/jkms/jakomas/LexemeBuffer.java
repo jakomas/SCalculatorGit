@@ -22,6 +22,7 @@ public class LexemeBuffer {
         return lexemeArrayList.get(pos);
     }
 
+    //Важно! Всякий раз, когда используются эти методы, меняется значение pos. Следите за этим!
     public int  getPos()  { return pos; }
     public void backPos() { pos--; }
     public void NextPos() { pos++; }
